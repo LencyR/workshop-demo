@@ -1,6 +1,6 @@
 import './index.css';
 
-// not comp
+// complete
 function App() {
   return (
     <div className="min-h-screen">
@@ -20,22 +20,20 @@ function App() {
       </nav>
 
       {/* Main Content */}
-      <main className="p-4">
+      <main className="flex-grow p-4">
         {/* <h1 className="text-2xl font-bold mb-4">Gallery</h1> */}
-        <div>
+        <div className="flex flex-wrap justify-between">
             <>
-              <div>
-                {[...Array(4)].map((_, index) => (
-                  <div key={index} className="w-1/4 p-2">
-                    <img
-                      src={`https://picsum.photos/200/300?random=${index}`}
-                      alt={`Random ${index}`}
-                      className="w-full h-auto rounded-lg shadow-lg border-solid border-[3.5px] border-black"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="w-full mt-4">
+              {[...Array(4)].map((_, index) => (
+                <div key={index} className="w-1/4 p-2">
+                  <img
+                    src={`https://picsum.photos/200/300?random=${index}`}
+                    alt={`Random ${index}`}
+                    className="w-full h-auto rounded-lg shadow-lg"
+                  />
+                </div>
+              ))}
+              <div className="flex flex-wrap w-full mt-4">
                 {[...Array(6)].map((_, index) => (
                   <div key={index} className="w-1/3 p-2">
                     <img
